@@ -15,10 +15,11 @@ def breadth_first_search(node):
     while queue:
         temp = queue.pop()
         s.append(temp.val)
-        if temp.left:
-            queue.insert(0, temp.left)
         if temp.right:
             queue.insert(0, temp.right)
+        if temp.left:
+            queue.insert(0, temp.left)
+
         print(queue)
 
     return s
